@@ -31,7 +31,15 @@
         <ul>
             <?php 
                 foreach($task as $key => $value)
-                echo "<li>$key => $value</li>";
+                {
+                    $upperkey = ucwords($key);
+                    if(!is_bool($value))
+                        echo "<li> $upperkey => $value</li>";
+                    else {
+                        $status = $value ? "Completed" : "Incomplete";
+                        echo "<li> $upperkey => $status</li>";
+                    }
+                }
             ?>
         </ul>
 	

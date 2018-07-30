@@ -5,9 +5,9 @@
 	$animals = ['cow','duck','bull','tiger','lion'];
 
 	$task = [
-		"title" => "clean house",
-		"due data" => "tomorrow",
-		"assigned to" => "gustavo",
+		"title" => "Clean house",
+		"due data" => "Tomorrow",
+		"assigned_to" => "Gustavo",
 		"completed" => false
 	];
 
