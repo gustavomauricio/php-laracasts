@@ -36,7 +36,7 @@
                     if(!is_bool($value))
                         echo "<li> $upperkey => $value</li>";
                     else {
-                        $status = $value ? "Completed" : "Incomplete";
+                        $status = $value ? "&#9989;" : "Incomplete";
                         echo "<li> $upperkey => $status</li>";
                     }
                 }

@@ -8,7 +8,7 @@
 		"title" => "Clean house",
 		"due data" => "Tomorrow",
 		"assigned_to" => "Gustavo",
-		"completed" => false
+		"completed" => true
 	];
 
 	require 'index.view.php';
