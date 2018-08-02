@@ -3,15 +3,15 @@
 <html>
     <head>
 	
-		<style>
-			h1 {
-				background-color: darkcyan;
-				
-				padding: 3rem;
-				
-				text-align: center;
-			}
-		</style>
+        <!-- <link rel="stylesheet" type="text/css" href="styles.css">  -->
+
+        <style>
+            h1 {
+                background-color: darkcyan;
+                text-align: center;
+                padding: 3rem;
+            }
+        </style>
 
     </head>
 
@@ -23,22 +23,10 @@
 
         <ul>
             <?php 
-                foreach($animals as $animal)
-                echo "<li>$animal</li>";
-            ?>
-        </ul>
-
-        <ul>
-            <?php 
-                foreach($task as $key => $value)
+                foreach($tasks as $task)
                 {
-                    $upperkey = ucwords($key);
-                    if(!is_bool($value))
-                        echo "<li> $upperkey => $value</li>";
-                    else {
-                        $status = $value ? "&#9989;" : "Incomplete";
-                        echo "<li> $upperkey => $status</li>";
-                    }
+                    $isTaskDone = $task->completed ? "done" : "incomplete"; 
+                    echo "<li> $task->description - $isTaskDone</li>";
                 }
             ?>
         </ul>

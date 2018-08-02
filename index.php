@@ -1,14 +1,12 @@
 <?php
 
+	require 'functions.php';
+	require 'Task.php';
+
 	$greeting = "Hello, " . $_GET['name'];
 
-	$animals = ['cow','duck','bull','tiger','lion'];
+	$pdo = connectDatabase();
 
-	$task = [
-		"title" => "Clean house",
-		"due data" => "Tomorrow",
-		"assigned_to" => "Gustavo",
-		"completed" => true
-	];
+	$tasks = fetchAllTasks($pdo);
 
 	require 'index.view.php';
