@@ -11,18 +11,10 @@
         die();
     }
 
-    function connectDatabase() {
-        try {
-            return $pdo = new PDO('mysql:host=localhost;dbname=mytodo', 'root', '123');
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
-    }
-
-    function fetchAllTasks($pdo) {
+    /*function fetchAllTasks($pdo) {
         $statement = $pdo->prepare('select * from todos');
 
 	    $statement->execute();
 
 	    return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
-    }
+    }*/
