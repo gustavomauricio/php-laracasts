@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-	
-        <!-- <link rel="stylesheet" type="text/css" href="styles.css">  -->
-
-        <style>
-            h1 {
-                background-color: darkcyan;
-                text-align: center;
-                padding: 3rem;
-            }
-        </style>
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
     </head>
-
     <body>
-
 		<h1> 
 			<?= $greeting ?> 
 		</h1>
-
         <ul>
             <?php 
                 foreach($tasks as $task)
@@ -30,6 +18,5 @@
                 }
             ?>
         </ul>
-	
     </body>
 </html>
